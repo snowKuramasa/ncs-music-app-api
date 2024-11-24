@@ -15,6 +15,17 @@ app.use(
 app.use(express.json())
 
 // CRUDエンドポイントの定義
+
+//test用
+app.get('/', async (req, res) => {
+  const users = await prisma.user.findMany()
+  res.json({
+    front: 'Next.js',
+    Server: 'Express',
+    message: 'Welcome! NCS Music App',
+  })
+})
+
 app.post('/users', async (req, res) => {
   const { name, email } = req.body
   const user = await prisma.user.create({
