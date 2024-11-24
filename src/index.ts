@@ -8,7 +8,9 @@ const prisma = new PrismaClient()
 app.use(cors()) // CORSを有効にする
 app.use(
   cors({
-    origin: ['https://ncs-music-app-api.vercel.app'],
+    //FIXME:開発中のため、どのドメインからでもアクセス可能にする
+    origin: true,
+    // origin: ['https://ncs-music-app-api.vercel.app'],
   })
 )
 
