@@ -4,7 +4,9 @@
   "description": "ncs 音楽再生アプリ　API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/index.js",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +16,12 @@
     "@types/express": "^5.0.0",
     "cors": "^2.8.5",
     "express": "^4.21.1",
+    "ncs-music-app-api": "file:",
     "prisma": "^5.22.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17"
   }
 }

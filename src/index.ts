@@ -1,6 +1,6 @@
 import express from 'express'
-import cors from 'cors' // CORSパッケージのインポート
 import { PrismaClient } from '@prisma/client'
+import cors from 'cors'
 
 const app = express()
 const prisma = new PrismaClient()
